@@ -1,0 +1,9 @@
+<p style="text-align: right; font-style: italic; font-size: 0.85em;">
+    {{ .Inner }}
+</p>
+
+{{ if .Get 0 }}
+<p style="text-align: right; font-weight: bold; font-style: italic; font-size: 0.85em; margin-top: -10px;">
+    {{ .Get 0 }}
+</p>
+{{ end }}
