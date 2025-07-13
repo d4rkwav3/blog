@@ -1,0 +1,29 @@
+baseURL = 'https://submundo.blog.br/'
+languageCode = 'pt-br'
+title = 'Submundo'
+defaultContentLanguage = "pt-br"
+theme = 'critique'
+enableEmoji = true
+copyright = 'Todos os direitos invertidos.'
+
+[pagination]
+  disableAliases = false
+  pagerSize = 5
+  path = 'page'
+
+[Params]
+    copylogo = '&#127279' #Custom Unicode Copyright logo
+
+    [params.author]
+        email = 'd4rkwav3@proton.me'
+        name = 'Bruno Venâncio'
+
+[outputs]
+  home = ['html', 'rss']
+  section = ['html', 'rss']
+  taxonomy = ['html']
+  term = ['html']
+
+[page]
+  nextPrevInSectionSortOrder = 'desc'
+  nextPrevSortOrder = 'desc'

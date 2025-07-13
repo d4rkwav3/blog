@@ -1,0 +1,25 @@
+{{ $cover := .Resources.Get .Params.albumCover }}
+
+<div id="album-info">
+    <img src="{{ $cover.RelPermalink }}" alt="{{- .Params.albumTitle -}}" id="cover">
+    <div id="information">
+        <h2>{{ .Params.artist }}</h2>
+        <sub>Artista/Banda</sub>
+        <hr>
+        <div id="album-year">
+            <h2>{{ .Params.albumTitle }} {{ .Params.releaseDate | dateFormat "(2006)" }}</h2>
+        </div>
+        <sub>Álbum/Ano</sub>
+        <hr>
+        <h2>{{ .Params.countryEmoji }} {{ .Params.country }}</h2>
+        <sub>País</sub>
+        <hr>
+        <h2>
+        {{ range .Params.Tags }}
+            {{ . }}
+        {{ end }}
+        </h2>
+        <sub>Gêneros</sub>
+    </div>
+      
+</div>

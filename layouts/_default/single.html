@@ -1,0 +1,21 @@
+{{ define "main" }}
+  {{ $path := substr .Path 0 12 }}
+
+  {{ if eq $path "/posts/music" }}
+    {{ partial "music.html" . }}
+    {{ .Content }}
+  {{ else }}
+    <div class="post-info">
+      <h1>{{ .Title }}</h1>
+
+      {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+      {{ $dateHuman := .Date | time.Format ":date_long" }}
+      <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+    </div>
+    
+
+    {{ .Content }}
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+  {{ end }}
+
+{{ end }}

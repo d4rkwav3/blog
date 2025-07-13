@@ -1,0 +1,13 @@
+{{ $year := now.Year }} <!-- Copyright Year -->
+{{ $type := "Copyleft" }} <!-- Copyright type = Copyright, Creative Commons, etc -->
+
+{{ if .Site.Copyright }}
+    <p>{{ .Site.Params.copylogo | htmlUnescape }} {{ $type }} {{ $year }}. {{ .Site.Copyright }}
+        Feito com 
+        <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">
+            <img src="/hugo-logo-wide.svg" alt="Hugo Logo" width="50px">
+        </a>
+    </p>    
+{{ else }} <!-- Default Copyright Notice -->
+    <p>&#169 Copyright {{ $year }}. All rights reserved.</p>
+{{ end }}

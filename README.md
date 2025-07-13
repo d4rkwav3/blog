@@ -1,0 +1,7 @@
+# Critique
+
+## Features
+
+## Installation
+
+## Configuration

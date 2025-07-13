@@ -1,0 +1,12 @@
+name = 'Critique'
+license = 'AGPLv3'
+licenselink = 'https://github.com/owner/repo/LICENSE'
+description = 'A blog theme for writing about music, books an movies.'
+
+# Taxonomy terms
+tags = ['blog', 'music', 'movies', 'books']
+features = ['some', 'awesome', 'features']
+
+[author]
+  name = 'Bruno Venâncio'
+  homepage = 'submundo.blog.br'

@@ -1,0 +1,490 @@
+/* Definição das Fontes */
+
+@font-face {
+  font-family: "Orbitron";
+  src: url("/fonts/Orbitron-Variable.woff2") format("woff2-variations");
+  font-weight: 400 900;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/InterVariable.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/fonts/ubuntu-regular-webfont.woff2") format("woff2");
+  font-display: fallback;
+}
+
+/* Para telas Grandes */
+
+@media all and (width > 700px) {
+  body {
+    color: rgba(232, 215, 241, 1);
+    background-color: rgba(14, 39, 60, 1);
+    font-family: Inter, Ubuntu, sans-serif;
+    margin: -1em 1.2em 0em 1em;
+    line-height: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3 {
+    color: rgba(114, 79, 149, 1);
+  }
+
+  header {
+    border-bottom: 1px solid rgba(232, 215, 241, 1);
+    padding-top: 1em;
+    margin-bottom: 1rem;
+    flex-direction: row;
+    max-width: 766px;
+    width: 100%;
+  }
+
+  footer {
+    border-top: 1px solid rgba(232, 215, 241, 1);
+    margin-top: 1rem;
+    max-width: 766px;
+    width: 100%;
+    text-align: right;
+  }
+
+  a {
+    color: rgba(161, 103, 165, 1);
+    text-decoration: none;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    max-width: 766px;
+    flex: 1 0 auto;
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  header nav ul li {
+    list-style: none;
+  }
+
+  .post-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%
+  }
+
+  time {
+    font-style: italic;
+    padding-left: 1em;
+  }
+
+  #album-info {
+    display: flex;
+    flex-direction: row;
+    max-width: 766px;
+  }
+
+  #cover {
+    max-width: 300px;
+    flex: 1;
+    align-self: flex-start;
+  }
+
+  #information {
+    flex: 1;
+    flex-wrap: wrap;
+    padding: 0em 1em 0em 1em;
+    margin: 0em 0em 0em 1em;
+    border: 0.15em solid rgba(232, 215, 241, 1);
+    line-height: 1.5em;
+    text-align: right;
+  }
+
+  #album-year {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+  }
+
+  #information sub {
+    line-height: 0%;
+    margin-top: -5em;
+    font-style: italic;
+  }
+
+  #information h2 {
+    margin: 0.5em 0em -0.15em 0em;
+  }
+
+  #blog-title {
+    font-family: Orbitron, Ubuntu, Inter, serif;
+    color: transparent;
+    background-image: linear-gradient(
+      rgba(214, 0, 111, 1) 0,
+      rgba(214, 0, 111, 1) 40%,
+      rgba(114, 79, 149, 1) 50%,
+      rgba(114, 79, 149, 1) 55%,
+      rgba(0, 56, 167, 1) 61%
+    );
+    background-clip: text;
+    filter: drop-shadow(2px 1px black);
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  #test, #test a {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #rss {
+    width: 30px;
+    filter: invert(47%) sepia(10%) saturate(1887%) hue-rotate(248deg) brightness(97%) contrast(87%);
+  }
+
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .pagination li {
+    list-style: none;
+    padding: 0.2em 1.5em;
+  }
+}
+
+/* Para telas médias */
+
+@media all and (400px < width < 700px) {
+  body {
+    color: rgba(232, 215, 241, 1);
+    background-color: rgba(14, 39, 60, 1);
+    font-family: Inter, Ubuntu, sans-serif;
+    margin: -1em 1.2em 0em 1em;
+    line-height: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3 {
+    color: rgba(114, 79, 149, 1);
+  }
+
+  header {
+    border-bottom: 1px solid rgba(232, 215, 241, 1);
+    padding-top: 1em;
+    margin-bottom: 1rem;
+    flex-direction: row;
+    max-width: 766px;
+    width: 100%;
+  }
+
+  footer {
+    border-top: 1px solid rgba(232, 215, 241, 1);
+    margin-top: 1rem;
+    max-width: 766px;
+    width: 100%;
+    text-align: right;
+  }
+
+  a {
+    color: rgba(161, 103, 165, 1);
+    text-decoration: none;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    max-width: 766px;
+    flex: 1 0 auto;
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  header nav ul li {
+    list-style: none;
+  }
+
+  .post-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%
+  }
+
+  time {
+    font-style: italic;
+    padding-left: 1em;
+  }
+
+  #album-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  #cover {
+    max-width: 100%;
+    flex: 1;
+    align-self: center;
+  }
+
+  #information {
+    flex: 1;
+    flex-wrap: wrap;
+    padding: 0em 1em 1em 1em;
+    margin: 1em 0em 0em 0em;
+    border: 0.15em solid rgba(232, 215, 241, 1);
+    line-height: 1.5em;
+    text-align: right;
+  }
+
+  #album-year {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+  }
+
+  #information sub {
+    line-height: 0%;
+    margin-top: -5em;
+    font-style: italic;
+  }
+
+  #information h2 {
+    margin: 0.5em 0em -0.15em 0em;
+  }
+
+  #blog-title {
+    font-family: Orbitron, Ubuntu, Inter, serif;
+    color: transparent;
+    background-image: linear-gradient(
+      rgba(214, 0, 111, 1) 0,
+      rgba(214, 0, 111, 1) 40%,
+      rgba(114, 79, 149, 1) 50%,
+      rgba(114, 79, 149, 1) 55%,
+      rgba(0, 56, 167, 1) 61%
+    );
+    background-clip: text;
+    filter: drop-shadow(2px 1px black);
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  #test, #test a {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #rss {
+    width: 30px;
+    filter: invert(47%) sepia(10%) saturate(1887%) hue-rotate(248deg) brightness(97%) contrast(87%);
+  }
+
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .pagination li {
+    list-style: none;
+    padding: 0.2em 1.5em;
+  }
+}
+
+/* Para telas pequenas */
+
+@media all and (width < 400px) {
+  body {
+    color: rgba(232, 215, 241, 1);
+    background-color: rgba(14, 39, 60, 1);
+    font-family: Inter, Ubuntu, sans-serif;
+    margin: -1em 1.2em 0em 1em;
+    line-height: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3 {
+    color: rgba(114, 79, 149, 1);
+  }
+
+  header {
+    border-bottom: 1px solid rgba(232, 215, 241, 1);
+    padding-top: 1em;
+    margin-bottom: 1rem;
+    flex-direction: row;
+    max-width: 766px;
+    width: 100%;
+  }
+
+  footer {
+    border-top: 1px solid rgba(232, 215, 241, 1);
+    margin-top: 1rem;
+    max-width: 766px;
+    width: 100%;
+    text-align: right;
+  }
+
+  a {
+    color: rgba(161, 103, 165, 1);
+    text-decoration: none;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    max-width: 100%;
+    flex: 1 0 auto;
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  header nav ul li {
+    list-style: none;
+  }
+
+  .post-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+
+  }
+
+  .post-info h2 {
+    align-self: first baseline;
+    text-align: justify;
+    text-justify: newspaper;
+  }
+
+  time {
+    font-style: italic;
+    align-self: last baseline;
+    margin-top: -1em;
+    padding-bottom: 1.5em;
+  }
+
+  #album-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 380px;
+  }
+
+  #cover {
+    max-width: 100%;
+    flex: 1;
+    align-self: flex-start;
+  }
+
+  #information {
+    flex: 1;
+    flex-wrap: wrap;
+    padding: 0em 1em 1em 1em;
+    margin: 1em 0em 0em 0em;
+    border: 0.15em solid rgba(232, 215, 241, 1);
+    line-height: 1.5em;
+    text-align: right;
+  }
+
+  #album-year {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+  }
+
+  #information sub {
+    line-height: 0%;
+    margin-top: -5em;
+    font-style: italic;
+  }
+
+  #information h2 {
+    margin: 0.5em 0em -0.15em 0em;
+  }
+
+  #blog-title {
+    font-family: Orbitron, Ubuntu, Inter, serif;
+    color: transparent;
+    background-image: linear-gradient(
+      rgba(214, 0, 111, 1) 0,
+      rgba(214, 0, 111, 1) 40%,
+      rgba(114, 79, 149, 1) 50%,
+      rgba(114, 79, 149, 1) 55%,
+      rgba(0, 56, 167, 1) 61%
+    );
+    background-clip: text;
+    filter: drop-shadow(2px 1px black);
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  #test, #test a {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #rss {
+    width: 30px;
+    filter: invert(47%) sepia(10%) saturate(1887%) hue-rotate(248deg) brightness(97%) contrast(87%);
+  }
+
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .pagination li {
+    list-style: none;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
