@@ -171,6 +171,11 @@
     list-style: none;
     padding: 0.2em 1.5em;
   }
+
+  .html-video {
+    display: block;
+    margin: auto;
+  }
 }
 
 /* Para telas médias */

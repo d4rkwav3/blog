@@ -3,7 +3,10 @@
 
   {{ if eq $path "/posts/music" }}
     {{ partial "music.html" . }}
+    
     {{ .Content }}
+
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
   {{ else }}
     <div class="post-info">
       <h1>{{ .Title }}</h1>
