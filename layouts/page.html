@@ -2,8 +2,7 @@
   {{ $path := substr .Path 0 12 }}
 
   {{ if eq $path "/posts/music" }}
-    {{ partial "music.html" . }}
-    
+
     {{ .Content }}
 
     {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}

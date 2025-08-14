@@ -1,0 +1,22 @@
+<div id="album-info">
+    <img src="{{ .Page.Params.albumCover }}" alt="{{- .Page.Params.albumTitle -}}" id="cover">
+    <div id="information">
+        <h2>{{ .Page.Params.artist }}</h2>
+        <sub>Artista/Banda</sub>
+        <hr>
+        <div id="album-year">
+            <h2>{{ .Page.Params.albumTitle }} {{ .Page.Params.releaseDate | dateFormat "(2006)" }}</h2>
+        </div>
+        <sub>Álbum/Ano</sub>
+        <hr>
+        <h2>{{ .Page.Params.countryEmoji }} {{ .Page.Params.country }}</h2>
+        <sub>País</sub>
+        <hr>
+        <h2>
+        {{ range .Page.Params.Tags }}
+            {{ . }}
+        {{ end }}
+        </h2>
+        <sub>Gêneros</sub>
+    </div> 
+</div>
