@@ -2,19 +2,20 @@
  função LEN retorna a quantidade de itens começando pelo 1 ao invés do 0 -->
 {{ $maxTags := sub (.Page.Params.Tags | len) 1 }}
 
-<div id="album-info">
-    <img src="{{ .Page.Params.albumCover }}" alt="{{- .Page.Params.albumTitle -}}" id="cover">
+<div id="book-info">
+    <img src="{{ .Page.Params.bookCover }}" alt="{{- .Page.Params.bookTitle -}}" id="book-cover">
     <div id="information">
-        <h2>{{ .Page.Params.artist }}</h2>
-        <sub>Artista/Banda</sub>
+        <h2>{{ .Page.Params.bookTitle }}</h2>
+        <sub>Título</sub>
         <hr>
-        <div id="album-year">
-            <h2>{{ .Page.Params.albumTitle }} {{ .Page.Params.releaseDate | dateFormat "(2006)" }}</h2>
-        </div>
-        <sub>Álbum/Ano</sub>
+        <h2>{{ .Page.Params.bookAuthor }}</h2>
+        <sub>Autor(es/as)</sub>
         <hr>
-        <h2>{{ .Page.Params.countryEmoji }} {{ .Page.Params.country }}</h2>
-        <sub>País</sub>
+        <h2>{{ .Page.Params.publishDate | dateFormat "2006" }}</h2>
+        <sub>Ano</sub>
+        <hr>
+        <h2>{{ .Page.Params.publisher }}</h2>
+        <sub>Editora</sub>
         <hr>
         {{ with .Page.Params.Tags }}
             <h2>{{ range $index, $value := . }}

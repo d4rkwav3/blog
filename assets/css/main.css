@@ -176,6 +176,18 @@
     display: block;
     margin: auto;
   }
+
+  #book-info {
+    display: flex;
+    flex-direction: row;
+    max-width: 766px;
+  }
+
+  #book-cover {
+    max-width: 220px;
+    flex: 1;
+    align-self: flex-start;
+  }
 }
 
 /* Para telas médias */
@@ -328,6 +340,18 @@
   .pagination li {
     list-style: none;
     padding: 0.2em 1.5em;
+  }
+
+  #book-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  #book-cover {
+    max-width: 100%;
+    flex: 1;
+    align-self: flex-start;
   }
 }
 
@@ -492,4 +516,15 @@
     padding-left: 1em;
     padding-right: 1em;
   }
+
+  #book-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 380px;
+  }
+
+  #book-cover {
+    max-width: 100%;
+    flex: 1;
+    align-self: flex-start;
 }
