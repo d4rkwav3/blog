@@ -1,12 +1,15 @@
 {{ $year := now.Year }} <!-- Copyright Year -->
-{{ $type := "Copyleft" }} <!-- Copyright type = Copyright, Creative Commons, etc -->
+{{ $type := .Site.Params.licenseType }} <!-- Copyright type = Copyright, Creative Commons, etc -->
 
 {{ if .Site.Copyright }}
-    <p>{{ .Site.Params.copylogo | htmlUnescape }} {{ $type }} {{ $year }}. {{ .Site.Copyright }}
-        Feito com 
-        <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">
-            <img src="/hugo-logo-wide.svg" alt="Hugo Logo" width="50px">
-        </a>
+    <p>{{ .Site.Params.copylogo | htmlUnescape }} {{ $type }} {{ $year }} 
+        {{ if .Site.Params.CopyrightLink }}<a href="{{ .Site.Params.copyrightLink }}" target="_blank" rel="noopener noreferrer">{{ .Site.Copyright }}</a>{{ else }}{{ .Site.Copyright }}{{ end }}
+        {{ if eq .Site.Params.CCType "BY-SA" }}
+        <img src="cc.svg" alt="Creative Commons Logo" width="15px">
+        <img src="by.svg" alt="Creative Commons Attribuition Logo" width="15px">
+        <img src="sa.svg" alt="Creative Commons ShareAlike Logo" width="15px">
+        {{ end }}
+        Feito com <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer"> <img src="/hugo-logo-wide.svg" alt="Hugo Logo" width="50px"></a>
     </p>    
 {{ else }} <!-- Default Copyright Notice -->
     <p>&#169 Copyright {{ $year }}. All rights reserved.</p>
