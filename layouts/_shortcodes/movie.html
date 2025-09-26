@@ -1,0 +1,22 @@
+<!-- Cria uma var que pega a quantidade de itens no array e subtrai um, isso pois a 
+ função LEN retorna a quantidade de itens começando pelo 1 ao invés do 0 -->
+
+<div id="movie-info">
+    <img src="{{ .Get "cover" }}" alt="{{- .Get "title" -}}" id="movie-cover">
+    <div id="movie-information">
+        <h2>{{ .Get "title" }}</h2>
+        <sub>Título</sub>
+        <hr>
+        <h2>{{ .Get "director" }}</h2>
+        <sub>Diretor(a)(es/as)</sub>
+        <hr>
+        <h2>{{ .Get "year" | dateFormat "2006" }}</h2>
+        <sub>Ano</sub>
+        <hr>
+        <h2>{{ .Get "country" }}</h2>
+        <sub>País</sub>
+        <hr>
+        <h2>{{ .Get "actor1" }}, {{ .Get "actor2" }}, {{ .Get "actor3" }}</h2>
+        <sub>Principais atores</sub>
+    </div> 
+</div>
