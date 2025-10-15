@@ -1,23 +1,23 @@
 <!-- Cria uma var que pega a quantidade de itens no array e subtrai um, isso pois a 
  função LEN retorna a quantidade de itens começando pelo 1 ao invés do 0 -->
-{{ $maxTags := sub (.Page.Params.Genres | len) 1 }}
+{{ $maxTags := sub (.Page.Params.bookGenres | len) 1 }}
 
 <div id="book-info">
-    <img src="{{ .Page.Params.bookCover }}" alt="{{- .Page.Params.bookTitle -}}" id="book-cover">
+    <img src="{{ .Get "cover" }}" alt="{{- .Get "title" -}}" id="book-cover">
     <div id="information">
-        <h2>{{ .Page.Params.bookTitle }}</h2>
+        <h2>{{ .Get "title" }}</h2>
         <sub>Título</sub>
         <hr>
-        <h2>{{ .Page.Params.bookAuthor }}</h2>
+        <h2>{{ .Get "author" }}</h2>
         <sub>Autor(es/as)</sub>
         <hr>
-        <h2>{{ .Page.Params.publishDate | dateFormat "2006" }}</h2>
+        <h2>{{ .Get "publishDate" | dateFormat "2006" }}</h2>
         <sub>Ano</sub>
         <hr>
-        <h2>{{ .Page.Params.publisher }}</h2>
+        <h2>{{ .Get "publisher" }}</h2>
         <sub>Editora</sub>
         <hr>
-        {{ with .Page.Params.genres }}
+        {{ with .Page.Params.bookGenres }}
             <h2>{{ range $index, $value := . }}
                     {{ . }}{{ if eq $index $maxTags }}{{ break }}{{ else }}, {{ end }}
                 {{ end }}</h2>

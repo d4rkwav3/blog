@@ -1,22 +1,22 @@
 <!-- Cria uma var que pega a quantidade de itens no array e subtrai um, isso pois a 
  função LEN retorna a quantidade de itens começando pelo 1 ao invés do 0 -->
-{{ $maxTags := sub (.Page.Params.Genres | len) 1 }}
+{{ $maxTags := sub (.Page.Params.musicGenres | len) 1 }}
 
 <div id="album-info">
-    <img src="{{ .Page.Params.albumCover }}" alt="{{- .Page.Params.albumTitle -}}" id="cover">
+    <img src="{{ .Get "cover" }}" alt="{{- .Get "title" -}}" id="cover">
     <div id="information">
-        <h2>{{ .Page.Params.artist }}</h2>
+        <h2>{{ .Get "artist" }}</h2>
         <sub>Artista/Banda</sub>
         <hr>
         <div id="album-year">
-            <h2>{{ .Page.Params.albumTitle }} {{ .Page.Params.releaseDate | dateFormat "(2006)" }}</h2>
+            <h2>{{ .Get "title" }} {{ .Get "releaseDate" | dateFormat "(2006)" }}</h2>
         </div>
         <sub>Álbum/Ano</sub>
         <hr>
-        <h2>{{ .Page.Params.countryEmoji }} {{ .Page.Params.country }}</h2>
+        <h2>{{ .Get "countryEmoji" }} {{ .Get "country" }}</h2>
         <sub>País</sub>
         <hr>
-        {{ with .Page.Params.genres }}
+        {{ with .Page.Params.musicGenres }}
             <h2>{{ range $index, $value := . }}
                     {{ . }}{{ if eq $index $maxTags }}{{ break }}{{ else }}, {{ end }}
                 {{ end }}</h2>
