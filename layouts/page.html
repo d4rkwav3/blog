@@ -13,6 +13,12 @@
 
     {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 
+  {{ else if eq $path "/posts/movie" }}
+  
+    {{ .Content }}
+
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+
   {{ else }}
     <div class="post-info">
       <h1>{{ .Title }}</h1>

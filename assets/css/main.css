@@ -33,6 +33,7 @@
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    padding: 1em 1em;
   }
 
   h1, h2, h3 {
@@ -228,7 +229,7 @@
 
 /* Para telas médias */
 
-@media all and (400px < width < 700px) {
+@media all and (450px < width < 800px) {
   body {
     color: rgba(232, 215, 241, 1);
     background-color: rgba(14, 39, 60, 1);
@@ -435,7 +436,7 @@
 
 /* Para telas pequenas */
 
-@media all and (width < 400px) {
+@media all and (width < 450px) {
   body {
     color: rgba(232, 215, 241, 1);
     background-color: rgba(14, 39, 60, 1);

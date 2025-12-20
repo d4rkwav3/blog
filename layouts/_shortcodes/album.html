@@ -1,6 +1,8 @@
 <!-- Cria uma var que pega a quantidade de itens no array e subtrai um, isso pois a 
  função LEN retorna a quantidade de itens começando pelo 1 ao invés do 0 -->
-{{ $maxTags := sub (.Page.Params.musicGenres | len) 1 }}
+
+{{ $genres := split (.Get "genres") "," }}
+{{ $maxTags := sub (len ($genres)) 1 }}
 
 <div id="album-info">
     <img src="{{ .Get "cover" }}" alt="{{- .Get "title" -}}" id="cover">
@@ -16,10 +18,10 @@
         <h2>{{ .Get "countryEmoji" }} {{ .Get "country" }}</h2>
         <sub>País</sub>
         <hr>
-        {{ with .Page.Params.musicGenres }}
+        {{ with $genres }}
             <h2>{{ range $index, $value := . }}
                     {{ . }}{{ if eq $index $maxTags }}{{ break }}{{ else }}, {{ end }}
-                {{ end }}</h2>
+                {{ end }}</h2>                
         {{ end }}
         <sub>Gêneros</sub>
     </div> 

@@ -1,9 +1,9 @@
 <iframe
-    src="https://embed.tidal.com/playlists/{{.Get 0}}"
+    src="https://embed.tidal.com/{{.Get 0}}/{{.Get 1}}"
     id="tidal"
     height="620"
-    allow="encrypted-media"
-    sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
+    allow="encrypted-media; fullscreen; clipboard-write https://embed.tidal.com; web-share"
+    sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox"
     title="TIDAL Embed Player"
     style="display: block; margin: auto;"
 ></iframe>
