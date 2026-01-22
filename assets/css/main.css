@@ -225,6 +225,33 @@
   #tidal {
     width: 650px;
   }
+
+  .author {
+    text-align: center;
+    margin: -0.5rem 0 0.5rem 0;
+  }
+
+  .tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    max-width: 100%;
+    margin: 1rem 0 0 0;
+  }
+
+  .tags ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-left: 0.5rem;
+    text-decoration: underline;
+    margin: 0;
+  }
+
+  .tags li {
+    padding-right: 0.5rem;
+  }
 }
 
 /* Para telas médias */
@@ -431,6 +458,10 @@
 
   #tidal {
     max-width: 100%;
+  }
+
+  .author {
+    text-align: right;
   }
 }
 
@@ -644,5 +675,7 @@
     max-width: 100%;
   }
 
-
+  .author {
+    text-align: right;
+  }
 }

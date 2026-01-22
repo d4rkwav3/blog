@@ -2,18 +2,23 @@
   {{ $path := substr .Path 0 12 }}
 
   {{ if eq $path "/posts/music" }}
+    <p class="author">Escrito por <a href="{{ .Page.Params.Social }}">{{ .Page.Params.Author }}</a>.</p>
 
     {{ .Content }}
-
+   
     {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 
   {{ else if eq $path "/posts/books" }}
   
+    <p class="author">Escrito por <a href="{{ .Page.Params.Social }}">{{ .Page.Params.Author }}</a>.</p>
+
     {{ .Content }}
 
     {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 
   {{ else if eq $path "/posts/movie" }}
+
+    <p class="author">Escrito por <a href="{{ .Page.Params.Social }}">{{ .Page.Params.Author }}</a>.</p>
   
     {{ .Content }}
 
@@ -21,15 +26,18 @@
 
   {{ else }}
     <div class="post-info">
-      <h1>{{ .Title }}</h1>
-
+      <div>
+        <h1>{{ .Title }}</h1>
+        <p>Escrito por <a href="{{ .Page.Params.Social }}">{{ .Page.Params.Author }}</a></p>
+      </div>
+      
       {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
       {{ $dateHuman := .Date | time.Format ":date_long" }}
       <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
     </div>
     
     {{ .Content }}
-    
+
     {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
   {{ end }}
 
