@@ -1,0 +1,23 @@
+<!--
+{{ $link_title := .Get "link_name" }}
+{{ $relation := "" }}
+
+{{ if eq $link_title "Mastodon" }}
+    {{ $relation = "me" }}
+{{ else if eq $link_title "Letterboxd" }}
+    {{ $relation = "me" }}
+{{ else if eq $link_title "Last.FM" }}
+    {{ $relation = "me" }}
+{{ else }}
+    {{ $relation = "external" }}
+{{ end }}
+-->
+<div id="social_link">
+    <a href="{{ .Get "link" }}" target="_blank" rel="me">
+        <img id="social_icon" src="{{ .Get "icon" }}" alt="{{ .Get "icon_alt" }}">
+    </a>
+    <div id="social_text">
+        <a href="{{ .Get "link" }}" target="_blank" rel="me">{{ .Get "link_name" }}</a>
+        <p>{{ .Get "legenda" }}</p>
+    </div>
+</div>

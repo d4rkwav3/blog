@@ -1,6 +1,6 @@
 name = 'Critique'
 license = 'AGPLv3'
-licenselink = 'https://github.com/owner/repo/LICENSE'
+licenselink = 'https://github.com/d4rkwav3/blog/LICENSE'
 description = 'A blog theme for writing about music, books and movies.'
 
 # Taxonomy terms

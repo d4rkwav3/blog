@@ -1,34 +1,10 @@
 {{ define "main" }}
   {{ $path := substr .Path 0 12 }}
 
-  {{ if eq $path "/posts/music" }}
-    <p class="author">Escrito por <a href="{{ .Page.Site.Params.social }}" external target="_blank" >{{ .Page.Params.Author }}</a>.</p>
-
-    {{ .Content }}
-   
-    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-
-  {{ else if eq $path "/posts/books" }}
-  
-    <p class="author">Escrito por <a href="{{ .Page.Site.Params.social }}" external target="_blank" >{{ .Page.Params.Author }}</a>.</p>
-
-    {{ .Content }}
-
-    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-
-  {{ else if eq $path "/posts/movie" }}
-
-    <p class="author">Escrito por <a href="{{ .Page.Site.Params.social }}" external target="_blank" >{{ .Page.Params.Author }}</a>.</p>
-  
-    {{ .Content }}
-
-    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-
-  {{ else }}
     <div class="post-info">
       <div>
         <h1>{{ .Title }}</h1>
-        <p class="author" style="text-align: left;">Escrito por <a href="{{ .Page.Site.Params.social }}" external target="_blank" >{{ .Page.Params.Author }}</a>.</p>
+        <p class="author" style="text-align: left;">Escrito por <a href="{{ .Page.Site.Params.social }}" >{{ .Page.Params.Author }}</a>.</p>
       </div>
       
       {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
@@ -39,6 +15,5 @@
     {{ .Content }}
 
     {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-  {{ end }}
 
 {{ end }}

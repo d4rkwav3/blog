@@ -1,6 +1,7 @@
 <!-- Cria uma var que pega a quantidade de itens no array e subtrai um, isso pois a 
  função LEN retorna a quantidade de itens começando pelo 1 ao invés do 0 -->
-{{ $maxTags := sub (.Page.Params.bookGenres | len) 1 }}
+{{ $genres := split (.Get "genres") "," }}
+{{ $maxTags := sub (len ($genres)) 1 }}
 
 <div id="book-info">
     <img src="{{ .Get "cover" }}" alt="{{- .Get "title" -}}" id="book-cover">
@@ -17,10 +18,10 @@
         <h2>{{ .Get "publisher" }}</h2>
         <sub>Editora</sub>
         <hr>
-        {{ with .Page.Params.bookGenres }}
+        {{ with $genres }}
             <h2>{{ range $index, $value := . }}
                     {{ . }}{{ if eq $index $maxTags }}{{ break }}{{ else }}, {{ end }}
-                {{ end }}</h2>
+                {{ end }}</h2>                
         {{ end }}
         <sub>Gêneros</sub>
     </div> 
