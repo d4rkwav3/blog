@@ -37,6 +37,7 @@
   }
 
   h1, h2, h3 {
+    font-family: 'Orbitron';
     color: rgba(114, 79, 149, 1);
   }
 
@@ -117,6 +118,10 @@
     border: 0.15em solid rgba(232, 215, 241, 1);
     line-height: 1.5em;
     text-align: right;
+  }
+
+  #information h1,h2,h3 {
+    font-family: 'Inter';
   }
 
   #album-year {
@@ -294,6 +299,7 @@
   }
 
   h1, h2, h3 {
+    font-family: 'Orbitron';
     color: rgba(114, 79, 149, 1);
   }
 
@@ -380,6 +386,10 @@
     border: 0.15em solid rgba(232, 215, 241, 1);
     line-height: 1.5em;
     text-align: right;
+  }
+
+  #information h1,h2,h3 {
+    font-family: 'Inter';
   }
 
   #album-year {
@@ -557,6 +567,7 @@
   }
 
   h1, h2, h3 {
+    font-family: 'Orbitron';
     color: rgba(114, 79, 149, 1);
   }
 
@@ -644,6 +655,10 @@
     border: 0.15em solid rgba(232, 215, 241, 1);
     line-height: 1.5em;
     text-align: right;
+  }
+
+  #information h1,h2,h3 {
+    font-family: 'Inter';
   }
 
   #album-year {
