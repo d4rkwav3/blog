@@ -4,6 +4,13 @@
 {{ with .OutputFormats.Get "rss" }}
   {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
 {{ end }}
+
+{{ if .IsHome }}
+  {{ with .Site.Params.mastodonProfileVerification }}
+    {{ printf `<link href=%q rel=%q>` . "me" | safeHTML }}
+  {{ end }}
+{{ end }}
+
 {{ template "_internal/opengraph.html" . }}
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
