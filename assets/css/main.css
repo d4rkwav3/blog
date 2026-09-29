@@ -278,7 +278,7 @@
   #social_link {
     display: flex;
     flex-direction: row;
-    max-width: 100%;
+    min-width: 100%;
     padding: 1em 1em .1em 1em;
     margin-bottom: 1em;
     background-color: rgba(74, 48, 109, .3);
@@ -554,7 +554,7 @@
   #social_link {
     display: flex;
     flex-direction: row;
-    max-width: 100%;
+    min-width: 100%;
     padding: 1em 1em .1em 1em;
     margin-bottom: 1em;
     background-color: rgba(74, 48, 109, .3);
